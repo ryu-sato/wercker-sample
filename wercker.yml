@@ -30,3 +30,11 @@ test:
         docker ps -a
         docker networks ls
         docker volume ls
+
+    - script:
+      name: ps
+      code: ps -ef
+
+    - script:
+      name: wait
+      code: sleep 10
