@@ -25,13 +25,6 @@ test:
       code: |
         echo "ps -ef : `ps -ef`"
 
-    - script:
-      name: wait
-      code: |
-        echo "sleeping `date`"
-        sleep 10
-        echo "slept `date`"
-
     - internal/docker-run:
       image: docker
       name: get-dockers-info
@@ -41,3 +34,9 @@ test:
         docker networks ls
         docker volume ls
 
+    - script:
+      name: wait
+      code: |
+        echo "sleeping `date`"
+        sleep 10
+        echo "slept `date`"
