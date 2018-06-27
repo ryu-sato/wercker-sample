@@ -12,6 +12,7 @@ build:
   steps:
     - internal/docker-run:
       image: docker
+      name: get docker's info
       cmd: |
         docker version
         docker ps -a
