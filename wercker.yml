@@ -20,15 +20,6 @@ test:
       code: |
         echo "hello wercker"
 
-    - internal/docker-run:
-      image: docker
-      name: get-dockers-info
-      cmd: |
-        docker version
-        docker ps -a
-        docker networks ls
-        docker volume ls
-
     - script:
       name: ps
       code: |
@@ -38,3 +29,13 @@ test:
       name: wait
       code: |
         sleep 10
+
+    - internal/docker-run:
+      image: docker
+      name: get-dockers-info
+      cmd: |
+        docker version
+        docker ps -a
+        docker networks ls
+        docker volume ls
+
