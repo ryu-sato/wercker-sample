@@ -23,8 +23,7 @@ test:
     - script:
       name: ps
       code: |
-        PSEF=`ps -ef`
-        echo "ps -ef : ${PSEF}"
+        echo "ps -ef : `ps -ef`"
 
     - script:
       name: wait
