@@ -15,6 +15,13 @@ build:
       code: |
         echo "hello wercker"
 
+test:
+  steps:
+    - script:
+      name: stdout
+      code: |
+        echo "hello wercker"
+
     - internal/docker-run:
       image: docker
       name: get-dockers-info
@@ -23,11 +30,3 @@ build:
         docker ps -a
         docker networks ls
         docker volume ls
-
-test:
-  steps:
-    - script:
-      name: stdout
-      code: |
-        echo "hello wercker"
-
