@@ -23,12 +23,15 @@ test:
     - script:
       name: ps
       code: |
-        echo `ps -ef`
+        PSEF=`ps -ef`
+        echo "ps -ef : ${PSEF}"
 
     - script:
       name: wait
       code: |
+        echo "sleeping `date`"
         sleep 10
+        echo "slept `date`"
 
     - internal/docker-run:
       image: docker
