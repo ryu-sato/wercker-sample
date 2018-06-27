@@ -33,8 +33,10 @@ test:
 
     - script:
       name: ps
-      code: ps -ef
+      code: |
+        ps -ef
 
     - script:
       name: wait
-      code: sleep 10
+      code: |
+        sleep 10
