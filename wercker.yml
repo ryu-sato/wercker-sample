@@ -32,7 +32,7 @@ test:
     - script:
       name: ps
       code: |
-        ps -ef
+        echo `ps -ef`
 
     - script:
       name: wait
