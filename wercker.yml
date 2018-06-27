@@ -1,6 +1,4 @@
-box:
-  id: alpine
-  cmd: /bin/sh
+box: alpine
 
 # services:
 #   # Docker daemon
