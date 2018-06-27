@@ -1,0 +1,17 @@
+box: wercker-labs/docker
+
+build:
+  steps:
+    - script:
+      name: docker version
+      code: docker version
+
+    - script:
+      name: docker ps
+      code: docker ps -a
+
+    - script:
+      name: uname
+      code: uname -a
+
+      
